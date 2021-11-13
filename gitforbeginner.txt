@@ -1,0 +1,12 @@
+git push -> dua len github
+git fetch -> lay tu github ve
+git merge -> 
+git revert
+Repo la mot kho chua luu tru sourcecode:
+- Local Repository
+- Remote Repository
+
+--> Link 2 Repositories -> git config
+ git remote add origin https://github.com/HuynhKhuong/STM32-StarterPack.git
+
+ git clone Remote repo
