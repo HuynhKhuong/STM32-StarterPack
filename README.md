@@ -1,1 +1,1 @@
-# STM32-StarterPacl
+# STM32-StarterPack
