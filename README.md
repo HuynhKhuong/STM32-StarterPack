@@ -5,9 +5,12 @@ This Repository contains all my mistakes in all peripherals initializaion and us
 
 ## 1.UART Transmit/Receive DMA
 ### a.Notes before initializing on CubeMX
-In subsequent calls to HAL_UART_Transmit_DMA, the functions immediately returns HAL_BUSY because huart->gState != HAL_UART_STATE_READY. 
+In subsequent calls to HAL_UART_Transmit_DMA, the functions immediately returns:
+
+**HAL_BUSY because huart->gState != HAL_UART_STATE_READY** 
+
 This is the case because UART_DMATransmitCplt relies on the USART interrupt to be enabled to reset huart->gState to HAL_UART_STATE_READY.
 If you configure UART DMA in Normal mode without interrupts, HAL_UART_Transmit_DMA only transmits for the first time and no more transmittion after.
-=> Must enable USART global interrupt.
+=> **Must enable USART global interrupt.**
 
 **Reference:** [ST discussion page](https://community.st.com/s/question/0D50X00009XkePT/hal-without-usart-interrupt-haluarttransmitdma-will-work-only-once).
