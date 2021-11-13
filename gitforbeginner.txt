@@ -15,3 +15,10 @@ Repo la mot kho chua luu tru sourcecode:
  git push origin [branch-name]: day tat ca cac commit len remote repository
 
 --> To change some file -> add -> comit -> push
+compare versions between 2 commits
+git log
+list version commits
+
+git reset <file>: remove from staging area/index
+git fetch: synchronize local and remote repo 
+git pull: synchronize local and remote repo 
