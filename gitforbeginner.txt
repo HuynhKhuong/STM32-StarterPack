@@ -9,4 +9,7 @@ Repo la mot kho chua luu tru sourcecode:
 --> Link 2 Repositories -> git config
  git remote add origin https://github.com/HuynhKhuong/STM32-StarterPack.git
 
- git clone Remote repo
+ git clone Remote repo [URL]
+ git workflow: 
+	Working Directory ->git init->Initialzation -> git add -> Staging Area -> git commit -> Local Repository -> git push -> Github
+ git push origin [branch-name]: day tat ca cac commit len remote repository
