@@ -17,3 +17,4 @@ I just started studying embedded coding on STM32 via STM32F407VG, many mistakes 
   b. Some note
      For continous reading: Must enable Continuous DMA Request; For many channel reading: NumOfConversion
      To read ADC: Only 1 instruction needed: HAL_ADC_Start_DMA
+  c. If you use Both ADC and UART DMA, DO REMEMBER TO DIVIDE YOUR ADC CLK/8, Interrupt of ADC DMA May occur too often, which caused your system to break down.
