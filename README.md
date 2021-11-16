@@ -3,8 +3,8 @@ I just started studying embedded coding on STM32 via STM32F407VG, many mistakes 
 This Repository contains all my mistakes in all peripherals initializaion and usage, my notes for solution and my guide for Setting on STM32CubeMX, and (maybe) knowledges before starting.
 
 
-## 1.UART Transmit/Receive DMA
-### a.Notes before initializing on CubeMX
+## 1. UART Transmit/Receive DMA
+### a. Notes before initializing on CubeMX
 In subsequent calls to HAL_UART_Transmit_DMA, the functions immediately returns:
 
 **HAL_BUSY because huart->gState != HAL_UART_STATE_READY** 
