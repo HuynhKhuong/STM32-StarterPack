@@ -18,3 +18,9 @@ I just started studying embedded coding on STM32 via STM32F407VG, many mistakes 
      For continous reading: Must enable Continuous DMA Request; For many channel reading: NumOfConversion
      To read ADC: Only 1 instruction needed: HAL_ADC_Start_DMA
   c. If you use Both ADC and UART DMA, DO REMEMBER TO DIVIDE YOUR ADC CLK/8, Interrupt of ADC DMA May occur too often, which caused your system to break down.
+
+3. I2C 
+  You can configure I2C easily with DMA and use it easily, remember not to run multiple I2C function at the same time, it would force
+the temprorary data line to release, which can cause crack.
+To declare and use global variables: 
+in main.c declare extern => in other files, declare using it as usual.
