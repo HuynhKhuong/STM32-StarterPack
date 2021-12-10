@@ -34,7 +34,7 @@ I just started studying embedded coding on STM32 via STM32F407VG, many mistakes 
 3. I2C 
   You can configure I2C easily with DMA and use it easily, remember not to run multiple I2C function at the same time, it would force
   the temprorary data line to release, which can cause crack. => Therefore you should wait for some miliseconds for the dataline to be stable and then start other task.
-
+   I2C can easily get error if you config DMA into circular mode, it would cause STM32 to continuously ask Slave to read, and cause data line conflict. Therefore you should config DMA (both directions) into Normal mode.
 4. Custom Library: Example library is in project 24C04interface
    My standard pattern to make a library: https://fortunate-smash-efc.notion.site/Embedded-Programing-1ce6e9d260744f34bc9a1285a08cb28a
 
