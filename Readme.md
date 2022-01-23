@@ -5,8 +5,11 @@
 ### a. Notes before initializing on CubeMX
 If you configure UART Transmitt DMA in Normal mode:  **Must enable USART global interrupt** 
 without interrupts, HAL_UART_Transmit_DMA only transmits for the first time and no more transmittion after. 
-> In subsequent calls to HAL_UART_Transmit_DMA, the functions immediately returns HAL_BUSY because huart->gState != HAL_UART_STATE_READY
+
+> In subsequent calls to HAL_UART_Transmit_DMA, the functions immediately returns HAL_BUSY because huart->gState != HAL_UART_STATE_READY.
+
 > This is the case because UART_DMATransmitCplt relies on the USART interrupt to be enabled to reset huart->gState to HAL_UART_STATE_READY. 
+
 *REFERENCE*: [HAL without usart interrupt will work only once](https://community.st.com/s/question/0D50X00009XkePT/hal-without-usart-interrupt-haluarttransmitdma-will-work-only-once).
 
 **Becareful about configuring clock tree:** I've configured clock tree for HSE but entire UART worked incorrectly.
@@ -14,19 +17,22 @@ without interrupts, HAL_UART_Transmit_DMA only transmits for the first time and 
   
 ### b. UART4 Receive IDLE DMA:
 > STM32 will automatically detect if the Receive line is free or not after a serie of incoming data. Then it will jump into an interrupt handler, which gives you some informations: data received, data length.
+
 To do that, you have to configure your UART Receive Module into **Normal DMA mode**. After interrupt, you have to **initialize it to continue receive**. 
-**ONE MORE THING**, At the beginning, DMA will automatically initialize Half Received Interrupt and Full Received Interrupt,which is quite useful for continuously receiving application and fixed data size application. In my case, I want UART to receive data with unknown size. Then Half Received Interrupt becomes useless. Therefore, you have to disable Half Received Interrupt DMA (example code in the **Final24C04interface** project)
-'''
+**ONE MORE THING**, At the beginning, DMA will automatically initialize Half Received Interrupt and Full Received Interrupt,which is quite useful for continuously receiving application and fixed data size application. In my case, I want UART to receive data with unknown size. Then Half Received Interrupt becomes useless. Therefore, you have to disable Half Received Interrupt DMA (example code in the **Final24C04interface** project).
+
+```
 HAL_UARTEx_ReceiveToIdle_DMA(&huart4, test_Rx_buff, RECEIVE_DATA_SIZE);
 __HAL_DMA_DISABLE_IT(&hdma_uart4_rx, DMA_IT_HT);
-'''
+```
+
 *REFERENCE*: [How to configure UART Receive Idle](https://l.facebook.com/l.php?u=https%3A%2F%2Ftapit.vn%2Fhuong-dan-su-dung-chuc-nang-uart-idle-dma%2F%3Ffbclid%3DIwAR29hT4baoN5Z-h6i-bBnlOnGHm6Jly8q3RyE_re_T8I7FghtWKu0KTECiU&h=AT2xhWq5Fo5TkGLKItwZie6NwOASbDDHSivUzJnqFcNFnC6eTb9mPbQxna4obTVOcfvT5vlkiSYAoTM8MlrHyLAfKLqVyrauGNiXsW-s3D1vSIHsP1jDIE89u9XyTPAeiSR80w)
 
 ### c. UART Error Handler: 
 Let's talk about how we deal with UART connections. Most of the tutorials about UART assume that we are working on a stable hardware platform, in which no silly errors could happen. This is not so right in real life application. What if during transmittion, Tx or Rx line is physically disconnected? 
 You think the peripheral will continue doing its job? Dead wrong, it will jump into error handler (which has code in it) due to Baudrate mismatch. Then it will stay disabled if you don't do anything to fix. 
 > Therefore you have to fix it by DeInit and then Init it again to make it work properly. Remember to Initialize the module to continue receive. (example code in the **Final24C04interface** project)
-'''
+ ```
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 {
 	HAL_UART_DeInit(&huart4);  
@@ -34,7 +40,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
     HAL_UARTEx_ReceiveToIdle_DMA(&huart4, test_Rx_buff, RECEIVE_DATA_SIZE);
 	__HAL_DMA_DISABLE_IT(&hdma_uart4_rx, DMA_IT_HT);
 }
-'''
+```
 
 ## 2. ADC DMA
 ### a. Example 
