@@ -3,8 +3,9 @@
 
 ## 1. UART Transmit/Receive DMA
 ### a. Notes before initializing on CubeMX
-If you configure UART Transmitt DMA in Normal mode:  **Must enable USART global interrupt** 
-without interrupts, HAL_UART_Transmit_DMA only transmits for the first time and no more transmittion after. 
+If you configure UART Transmitt DMA in Normal mode:  **Must enable USART global interrupt**
+
+**Error:**without interrupts, HAL_UART_Transmit_DMA only transmits for the first time and no more transmittion after. 
 
 > In subsequent calls to HAL_UART_Transmit_DMA, the functions immediately returns HAL_BUSY because huart->gState != HAL_UART_STATE_READY.
 
