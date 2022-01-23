@@ -57,5 +57,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 
 ## 4. Custom Library: 
 *Example library is in project **24C04interface***
+
 My standard pattern to make a library: [Notion](https://fortunate-smash-efc.notion.site/Embedded-Programing-1ce6e9d260744f34bc9a1285a08cb28a)
+
 **NOTE:** To declare and use global variables: in main.c declare extern => in other files, declare using it as usual.
