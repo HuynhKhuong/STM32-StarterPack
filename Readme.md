@@ -96,7 +96,7 @@ What about current? It obeys the Ohm rules.
 ```
 Current I = U/Z
 ```
-That means I can vary at a specific range based on independance of your circuit. So that means you don't have to worry about the **I** specification unless your application exceeds the max I value your power supply can supply.
+That means I can vary at a specific range based on inpendance of your circuit. So that means you don't have to worry about the **I** specification unless your application exceeds the max I value your power supply can supply.
 
 *REFERENCE*: [Điện trở hạn dòng/cản trở dòng như thế nào?](http://www.dientuvietnam.net/forums/forum/c%C6%A1-s%E1%BB%9F-%C4%90i%E1%BB%87n-%C4%90i%E1%BB%87n-t%E1%BB%AD/%C4%90i%E1%BB%87n-t%E1%BB%AD-d%C3%A0nh-cho-ng%C6%B0%E1%BB%9Di-m%E1%BB%9Bi-b%E1%BA%AFt-%C4%91%E1%BA%A7u/1644759-%C4%90i%E1%BB%87n-tr%E1%BB%9F-h%E1%BA%A1n-d%C3%B2ng-c%E1%BA%A3n-tr%E1%BB%9F-d%C3%B2ng-%C4%91i%E1%BB%87n-nh%C6%B0-th%E1%BA%BF-n%C3%A0o)
 
