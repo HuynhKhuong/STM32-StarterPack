@@ -76,3 +76,7 @@ That's the main feature you have to consider when choosing your mosfet. > Vgh (t
 > Therefore, remember to choose the suitable one for your application. Make sure your Vgs is 0.5V - 1V higher than the Vgs threshold (check datasheet in the Electrical Characteristics). Vgs in the **Absolute Maximum Ratings** is the max Vgs voltage you can supply
 
 One more thing: If you're using *N-type Mosfet*, your load must be on the **Drain** side.
+
+*REFERENCE*: 
+- [MOSFET HOW IT WORKS](https://www.digikey.in/en/blog/how-to-select-a-mosfet-for-logic-circuits-or-gate-design)
+- [PROPER PICKING AND USING MOSFETS](https://www.youtube.com/watch?v=ND8uJWlOgIQ)
