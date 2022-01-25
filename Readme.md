@@ -67,12 +67,19 @@ My standard pattern to make a library: [Notion](https://fortunate-smash-efc.noti
 > Some of my revision to about basic knowledges to understand more about electronic components
 ### a. How to choose Mosfet?
 Mosfet introduction and how it works? [Mosfet introduction, check from 1:59](https://www.digikey.in/en/blog/how-to-select-a-mosfet-for-logic-circuits-or-gate-design)
-> Brief: There is a form of *capacitor like* structure in the conduction channel. This is also called *Metal Oxide* term of the mosfet. Applying voltage to the gate allows current to flow throught the capacitor which begins to charge 
--> generate *electric field* : Electron gather at the oxide layer filling in the gap between the source and drain (*conductive region*)
+> Brief: There is a form of *capacitor like* structure in the conduction channel. This is also called *Metal Oxide* term of the mosfet. Applying voltage to the gate allows current to flow throught the capacitor which begins to charge.
+
+-> generate *electric field* : Electron gather at the oxide layer filling in the gap between the source and drain (*conductive region*).
+
 -> When enough electrons have gathered to *create a path*, current flows in the conductive region.
+
 -> Mosfet starts to turn on. The conductive region has a small amount of **resistance** when the MOSFET first turns on.
+
 -> the **resistance** decreases until the Mosfet is fully on.
-That's the main feature you have to consider when choosing your mosfet. > Vgh (threshold) is just the threshold to for the Mosfet to start to turn on. In this case, a big resistance exists, and can cause damage to your application (*for example: Mosfet may burn out if you apply large current to Mosfet*). 
+That's the main feature you have to consider when choosing your mosfet.
+
+> Vgh (threshold) is just the threshold to for the Mosfet to start to turn on. In this case, a big resistance exists, and can cause damage to your application (*for example: Mosfet may burn out if you apply large current to Mosfet*). 
+
 > Therefore, remember to choose the suitable one for your application. Make sure your Vgs is 0.5V - 1V higher than the Vgs threshold (check datasheet in the Electrical Characteristics). Vgs in the **Absolute Maximum Ratings** is the max Vgs voltage you can supply
 
 One more thing: If you're using *N-type Mosfet*, your load must be on the **Drain** side.
