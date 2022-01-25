@@ -87,3 +87,27 @@ One more thing: If you're using *N-type Mosfet*, your load must be on the **Drai
 *REFERENCE*: 
 - [MOSFET HOW IT WORKS](https://www.digikey.in/en/blog/how-to-select-a-mosfet-for-logic-circuits-or-gate-design)
 - [PROPER PICKING AND USING MOSFETS](https://www.youtube.com/watch?v=ND8uJWlOgIQ)
+
+### b. Power Supply
+Checking every power supply online, you can see that there are always two specifications: Voltage and Current. What should we understand those?
+Most of popular power supply nowadays you can check online is *fixed voltage power supply*. That means when you apply this power supply can supply your circuit at **fixed voltage**. 
+
+What about current? It obeys the Ohm rules. 
+```
+Current I = U/Z
+```
+That means I can vary at a specific range based on independance of your circuit. So that means you don't have to worry about the **I** specification unless your application exceeds the max I value your power supply can supply.
+
+*REFERENCE*: [Điện trở hạn dòng/cản trở dòng như thế nào?] (http://www.dientuvietnam.net/forums/forum/c%C6%A1-s%E1%BB%9F-%C4%90i%E1%BB%87n-%C4%90i%E1%BB%87n-t%E1%BB%AD/%C4%90i%E1%BB%87n-t%E1%BB%AD-d%C3%A0nh-cho-ng%C6%B0%E1%BB%9Di-m%E1%BB%9Bi-b%E1%BA%AFt-%C4%91%E1%BA%A7u/1644759-%C4%90i%E1%BB%87n-tr%E1%BB%9F-h%E1%BA%A1n-d%C3%B2ng-c%E1%BA%A3n-tr%E1%BB%9F-d%C3%B2ng-%C4%91i%E1%BB%87n-nh%C6%B0-th%E1%BA%BF-n%C3%A0o)
+
+### c. How does pull up resistor work?
+Check this link: [Pull-up Resistors](https://learn.sparkfun.com/tutorials/pull-up-resistors/all#:~:text=The%20pull%2Dup%20resistor%20R1,to%20read%20a%20high%20state.&text=If%20you%20have%20a%20really,pin%20can%20reliably%20change%20state.)
+
+> **Pull up resistor** is a way to prevent *floating point* in the input of every MCU applications. Besides, **Pull up resistors** prevents shortage cases when you connect directly your *Voltage source* to *Ground* (through button).
+
+That is a very common way of thinking. But let's see, if the input pin is connected to Vcc through **pull up resistor**, the voltage at the input pin V is obviously not equal to Vcc. It will experience a Voltage lost through **pull up resistor** right?
+
+So how does the input pin still recognise high state? 
+> It turns out, an input pin on a MCU has an impedance that can vary from 100k - 1M Ohm. That means, Current going from Vcc -> pull up resistor -> input pin -> ground is very minute -> drop out voltage is minute -> input pins still recognizes high voltage. 
+
+So we can just take biggest resistor possible right? *Read the link above for more information*
