@@ -46,7 +46,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 ## 2. ADC DMA
 ### a. Example 
 **DMA_ADC** is my project for reading ADC3 Channel 1 using DMA
-### b. Some note
+### b. Some notes
 - For continous reading: Must enable Continuous DMA Request; For many channel reading: NumOfConversion
 - To read ADC: Only 1 instruction needed: HAL_ADC_Start_DMA
 - If you use Both ADC and UART DMA, **DO REMEMBER TO DIVIDE YOUR ADC CLK/8**, Interrupt of ADC DMA may occur too often, which caused your system to break down.
@@ -111,3 +111,17 @@ So how does the input pin still recognise high state?
 > It turns out, an input pin on a MCU has an impedance that can vary from 100k - 1M Ohm. That means, Current going from Vcc -> pull up resistor -> input pin -> ground is very minute -> drop out voltage is minute -> input pins still recognizes high voltage. 
 
 So we can just take biggest resistor possible right? *Read the link above for more information*
+
+### d. How to properly solder and how to keep tin clean? 
+> Seems like this is a very simple topic. However, to most students who don't pratice regularly like me, it's time consuming to figure out things like this. 
+1. **How to properly solder?** Remember to always keep your tin covered with soldering lead. 
+
+First: *Soldering lead* is a very effective thermal conductive compound. Covering with *soldering lead* helps your tin to paste temperature better, and solder components quickly. Unless, you'll have to stick your tin to the component, wait for it to paste enough heat to melt the soldering lead. That would destroy your electrical components!
+
+Second: *Soldering lead* coverage will help prevent your tin from oxide process. If your tin experiences oxide process, It will be unable to get your *Soldering lead* stick on it anymore. 
+
+2. **HOw to clean your tin?** Oxide process is a bad affect on tins. However, we can't completely prevent that phenomenon. More or less, it will cause on some part of your tins. That's the reason why we have to clean the tin regularly. And [*How to clean it*?](https://www.youtube.com/watch?v=ijNXNFVNRBY)
+
+Above is the link that I've chosen. On the internet, many tips are given. Some are quite controversial like *using sand paper*. I don't know the reason why but we'd better not touch on that method, do we? So below is the solution that we can use:
+> **Tools**: Flux, Soldering lead, **wet** sponge, steel/brass wool.
+> **Process**: Heat up your tin. Dip your tin into flux, the flux will help you get rid of most of oxide substances on your tin. Clean your tin with *sponge* or *brass wool*. Repeat that procedure until your tin is completely clean. Apply *soldering lead* on your tin to prevent it from oxide process again.
