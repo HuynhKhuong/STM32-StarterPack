@@ -120,7 +120,7 @@ First: *Soldering lead* is a very effective thermal conductive compound. Coverin
 
 Second: *Soldering lead* coverage will help prevent your tin from oxide process. If your tin experiences oxide process, It will be unable to get your *Soldering lead* stick on it anymore. 
 
-2. **HOw to clean your tin?** Oxide process is a bad affect on tins. However, we can't completely prevent that phenomenon. More or less, it will cause on some part of your tins. That's the reason why we have to clean the tin regularly. And [*How to clean it*?](https://www.youtube.com/watch?v=ijNXNFVNRBY)
+2. **How to clean your tin?** Oxide process is a bad affect on tins. However, we can't completely prevent that phenomenon. More or less, it will cause on some part of your tins. That's the reason why we have to clean the tin regularly. And [*How to clean it*?](https://www.youtube.com/watch?v=ijNXNFVNRBY)
 
 Above is the link that I've chosen. On the internet, many tips are given. Some are quite controversial like *using sand paper*. I don't know the reason why but we'd better not touch on that method, do we? So below is the solution that we can use:
 > **Tools**: Flux, Soldering lead, **wet** sponge, steel/brass wool.
@@ -165,7 +165,8 @@ int a[10];
 ```
 Using pointer to access to its struct using: **->** operator.
 
-- *Fourth*, function pointer: [Function pointers](function_pointer.md)
-- *Fifth*, A very intuitive way to read pointers: [pointer's spiral rules](http://c-faq.com/decl/spiral.anderson.html)
+- *Fourth*, function pointer: [Function pointers](function_pointer.md).
+- *Fifth*, A very intuitive way to read pointers: [pointer's spiral rules](http://c-faq.com/decl/spiral.anderson.html).
+
 **ESPECIALLY**, *function pointer* and *struct pointer* is used so much in [*OOP based C programming*](C_OOP_Programming.md)
  
