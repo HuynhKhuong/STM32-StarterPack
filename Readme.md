@@ -125,3 +125,44 @@ Second: *Soldering lead* coverage will help prevent your tin from oxide process.
 Above is the link that I've chosen. On the internet, many tips are given. Some are quite controversial like *using sand paper*. I don't know the reason why but we'd better not touch on that method, do we? So below is the solution that we can use:
 > **Tools**: Flux, Soldering lead, **wet** sponge, steel/brass wool.
 > **Process**: Heat up your tin. Dip your tin into flux, the flux will help you get rid of most of oxide substances on your tin. Clean your tin with *sponge* or *brass wool*. Repeat that procedure until your tin is completely clean. Apply *soldering lead* on your tin to prevent it from oxide process again.
+
+## 6. C/C++ programming fundamentals
+### a. Pointer
+> Basically, pointer is a variable which stores memory address as it values
+
+How to declare a pointer
+```
+[data_type] *(name of pointer);
+```
+**What's its application?**
+- *First*, pointers can be parsed in a function as arguments. This helps you to do both things: avoid copies and share data. 
+
+*A normal function which computes sum of 2 integers: this function parses 2 pointers*
+```
+int add(int *a, int *b)
+{return (*a + *b);}
+```
+This function will take directly values of 2 variables and compute result. *If we build a function which pass 2 integers only*
+```
+int add(int a, int b)
+{return (a+b)}
+This function will copy values of 2 variales and store to function's local variables *a* and *b*, and compute
+
+- *Second*, pointer to an array:
+```
+*Declare an array of integers*
+int a[10];
+```
+*a* itself is the pointer to that array. It can also be used as an index to access to its array's members. By increasing and decreasing index as address values.
+
+- *Third*, pointer to a struct:
+```
+*Declare a pointer to a struct*
+[struct_type] *pointer;
+```
+Using pointer to access to its struct using: **->** operator.
+
+- *Fourth*, function pointer: [Function pointers](function_pointer.md)
+- *Fifth*, A very intuitive way to read pointers: [pointer's spiral rules](http://c-faq.com/decl/spiral.anderson.html)
+**ESPECIALLY**, *function pointer* and *struct pointer* is used so much in [*OOP based C programming*](C_OOP_Programming.md)
+ 
