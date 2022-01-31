@@ -168,5 +168,5 @@ Using pointer to access to its struct using: **->** operator.
 - *Fourth*, function pointer: [Function pointers](function_pointer.md).
 - *Fifth*, A very intuitive way to read pointers: [pointer's spiral rules](http://c-faq.com/decl/spiral.anderson.html).
 
-**ESPECIALLY**, *function pointer* and *struct pointer* is used so much in [*OOP based C programming*](C_OOP_Programming.md)
+**ESPECIALLY**, *function pointer* and *struct pointer* is the core of [*OOP based C programming method*](C_OOP_Programming.md)
  
