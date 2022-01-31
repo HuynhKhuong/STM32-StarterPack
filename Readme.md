@@ -138,14 +138,17 @@ How to declare a pointer
 - *First*, pointers can be parsed in a function as arguments. This helps you to do both things: avoid copies and share data. 
 
 *A normal function which computes sum of 2 integers: this function parses 2 pointers*
+
 ```
 int add(int *a, int *b)
 {return (*a + *b);}
 ```
+
 This function will take directly values of 2 variables and compute result. *If we build a function which pass 2 integers only*
 ```
 int add(int a, int b)
 {return (a+b)}
+```
 This function will copy values of 2 variales and store to function's local variables *a* and *b*, and compute
 
 - *Second*, pointer to an array:
