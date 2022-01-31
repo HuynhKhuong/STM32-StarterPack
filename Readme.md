@@ -130,7 +130,7 @@ Above is the link that I've chosen. On the internet, many tips are given. Some a
 ### a. Pointer
 > Basically, pointer is a variable which stores memory address as it values
 
-How to declare a pointer
+**How to declare a pointer**
 ```
 [data_type] *(name of pointer);
 ```
