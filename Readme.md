@@ -15,10 +15,10 @@ I just started studying embedded coding on STM32 via STM32F407VG, many mistakes 
 
 	Comment and notes on how to basically use I2C Interface: How to Initialize I2C interface? How I2C works with other devices?...
 
-- [Electrical components note](Electricacomponents.md)
+- [Electrical components note](Electricalcomponents.md)
 	
 	Some of my revision to about basic knowledges to understand more about electronic components
-	
+
 ## 4. Custom Library: 
 *Example library is in project **24C04interface***
 
