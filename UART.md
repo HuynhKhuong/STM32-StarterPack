@@ -26,11 +26,11 @@ If you configure UART Transmitt DMA in Normal mode:  **Must enable USART global 
 
 [TestDMA](/TestDMA) is my project using DMA UART Transmit and Receive. This project uses **UART4**, Transmit using **Normal mode** and **Receive using Circular mode**. In the future i will study more about IDLE Mode for more complex data transmit.
   
-## UART4 Receive IDLE DMA:
+## UART Receive IDLE DMA:
 
 ### Issue: 
 
-** My Expectation:** STM32 will automatically detect if the Receive line is free or not after a serie of incoming data. Then it will jump into an interrupt handler, which gives you some informations: data received, data length.
+**My Expectation:** STM32 will automatically detect if the Receive line is free or not after a serie of incoming data. Then it will jump into an interrupt handler, which gives you some informations: data received, data length.
 
 ### Solution:
 To do that, you have to configure your UART Receive Module into **Normal DMA mode**. After interrupt, you have to **initialize it to continue receive**. At the beginning, DMA will automatically initialize Half Received Interrupt and Full Received Interrupt,which is quite useful for continuously receiving application and fixed data size application. In my case, I want UART to receive data with unknown size. Then Half Received Interrupt becomes useless. Therefore, you have to disable Half Received Interrupt DMA.
