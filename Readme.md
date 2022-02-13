@@ -7,13 +7,9 @@ I just started studying embedded coding on STM32 via STM32F407VG, many mistakes 
 
 	Comment and notes including 3 types of errors: How to initialize UART on CubeMX, UART Receive IDLE DMA, UART Error Handler 
 
-## 2. ADC DMA
-### a. Example 
-**DMA_ADC** is my project for reading ADC3 Channel 1 using DMA
-### b. Some notes
-- For continous reading: Must enable Continuous DMA Request; For many channel reading: NumOfConversion
-- To read ADC: Only 1 instruction needed: HAL_ADC_Start_DMA
-- If you use Both ADC and UART DMA, **DO REMEMBER TO DIVIDE YOUR ADC CLK/8**, Interrupt of ADC DMA may occur too often, which caused your system to break down.
+- [ADC DMA](ADC.md)
+
+	Comment and notes on how to basically use ADC: How continuous read ADC? How to read multiple ADCs? Code to Start ADC?...
 
 ## 3. I2C 
 - You can configure I2C easily with DMA and use it easily, remember not to run multiple I2C function at the same time, it would force the temprorary data line to release, which can cause crack. => Therefore you should wait for some miliseconds for the dataline to be stable and then start other task.
