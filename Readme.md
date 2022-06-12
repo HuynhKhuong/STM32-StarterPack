@@ -30,3 +30,14 @@ Dynamic Memory Allocation focuses in Heap region in Memory. It differs from case
 - [Electrical components note](Electricalcomponents.md)
 	
 	Some of my revision to about basic knowledges to understand more about electronic components
+
+**5. Object Oriented programming in C**
+
+I have created a simple project on [STM32F103C8T6](./CommunicationTest/) in which we could simple toggle LEDs on a GUI. In this project, I try to use C language to emulate OOP in C++ for better understanding. 3 concepts from OOP are implemented including: 
+- Encapsulation
+- Inheritance + Polymorphism.
+Through this project, I have learnt a lot about how the OOP works and especially the concept of the **function pointer**. 
+
+Note that to better understand OOP in C, you should have basic knowledge in **pointers, structs, function pointers**. 
+
+*Reference:* https://www.state-machine.com/oop
