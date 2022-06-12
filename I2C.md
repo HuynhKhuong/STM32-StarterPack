@@ -12,4 +12,4 @@ This Note focuses on ADC peripherals. How to initialize it and some notes for er
 - [Some explanations about how HAL library works with I2C commands](https://stackoverflow.com/questions/38230248/how-do-i-use-the-stm32cubef4-hal-library-to-read-out-the-sensor-data-with-i2c?fbclid=IwAR2iq2CyQFAnMB6CFuYCcMLlap_2DaNZ8RYe8ZNhoJq8qPlUsn3GF-69CPg) 
 
 ## Example Codes:
-[Final24C04Interface](./Final24C04Interface/) is my mini project which interface with EEPROM24C04 using I2C standards
+[I2C_DMA](./24C04_EEPROM/) is my mini project which interface with EEPROM24C04 using I2C standards

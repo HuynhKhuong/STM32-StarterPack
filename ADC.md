@@ -10,4 +10,4 @@ This Note focuses on ADC peripherals. How to initialize it and some notes for er
 - If you use Both ADC and UART DMA, **DO REMEMBER TO DIVIDE YOUR ADC CLK/8**, Interrupt of ADC DMA may occur too often, which caused your system to break down.
 
 ### Example code 
-[DMA_ADC](./DMA_ADC/) is my project for reading ADC3 Channel 1 using DMA
+[DMA_ADC](./ADC_DMA/) is my project for reading ADC3 Channel 1 using DMA
