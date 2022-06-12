@@ -21,7 +21,7 @@ I just started studying embedded coding on STM32 via STM32F407VG, many mistakes 
 My standard pattern to make a library: [Notion](https://fortunate-smash-efc.notion.site/Embedded-Programing-1ce6e9d260744f34bc9a1285a08cb28a)
 Refer to this [HeadfirstC](http://karadev.net/uroci/filespdf/files/head-first-c-o-reilly-david-grifffiths-dawn-griffiths.pdf) documentation - Chapter 4 for better understanding (how C works with splitted files and how the compiler works)
 
-**b. Dynamic Memory Allocation 
+**b. Dynamic Memory Allocation** 
 
 To understand Dynamic Memory Alloction, you should take a quick look to [Memory Architecture in C](https://www.facebook.com/truonggiang.deviot.vn/videos/1305159089970607)
 
